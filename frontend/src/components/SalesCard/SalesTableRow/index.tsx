@@ -1,4 +1,5 @@
 import NotificationButton from "../NotificationButton"
+import "./styles.css"
 
 function SalesTableRow() {
     return(
@@ -11,7 +12,9 @@ function SalesTableRow() {
             <td className="show992">11</td>
             <td>R$ 55300.00</td>
             <td>
-                <NotificationButton />
+                <div className="red-btn-container">
+                    <NotificationButton />
+                </div>
             </td>
         </tr>
         </>
