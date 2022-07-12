@@ -1,5 +1,7 @@
 import SalesTableRow from "../SalesTableRow"
 import SalesTableHead from "../SalesTableHead"
+import ReactDatePicker from "react-datepicker"
+import "react-datepicker/dist/react-datepicker.css"
 import "./styles.css"
 
 function SalesCard() {
@@ -9,10 +11,20 @@ function SalesCard() {
         <h2 className="sales-title">Vendas</h2>
         <div>
             <div className="form-control-container">
-                <input className="form-control" type="text"/>
+                <ReactDatePicker
+                    selected={new Date()}
+                    onChange={(date: Date) => {}}
+                    className="form-control"
+                    dateFormat="dd/MM/yyyy"
+                />
             </div>
             <div className="form-control-container">
-                <input className="form-control" type="text"/>
+                <ReactDatePicker
+                    selected={new Date()}
+                    onChange={(date: Date) => {}}
+                    className="form-control"
+                    dateFormat="dd/MM/yyyy"
+                />
             </div>
         </div>
         <div>
