@@ -1,0 +1,17 @@
+.red-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 3rem; 
+    height: 3rem;
+    border-radius: 30%;
+    border: rgb(255, 59, 59) solid 1px;
+}
+.red-btn a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
