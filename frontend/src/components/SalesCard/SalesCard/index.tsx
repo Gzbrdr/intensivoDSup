@@ -1,9 +1,11 @@
+import axios from "axios"
+
+import { useEffect, useState } from "react"
 import SalesTableRow from "../SalesTableRow"
 import SalesTableHead from "../SalesTableHead"
 import ReactDatePicker from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css"
 import "./styles.css"
-import { useState } from "react"
 
 
 function SalesCard() {
@@ -11,6 +13,14 @@ function SalesCard() {
     const max = new Date()
     const [minDate, setMinDate] = useState(min)
     const [maxDate, setMaxDate] = useState(max)
+
+    useEffect(() => {
+        axios.get("http://localhost:8080/sales")
+            .then(response => {
+                console.log(response.data);
+            });
+    }, [])
+
     return (
     <>
     <div className="card">
